@@ -1,0 +1,50 @@
+<script type="text/javascript">
+  RED.nodes.registerType('thing-property-out', {
+    paletteLabel: 'property out',
+    category: 'things',
+    color: '#a6bbcf',
+    defaults: {
+      name: { value: '' },
+      gateway: { type: 'things-gateway' },
+      deviceId: { value: '' },
+      property: { value: '' },
+    },
+    inputs: 1,
+    outputs: 0,
+    icon: 'light.png',
+    label: function() {
+      return this.name || this.property + '@' + this.deviceId;
+    },
+  });
+</script>
+
+<script type="text/x-red" data-template-name="thing-property-out">
+  <div class="form-row">
+    <label for="node-input-gateway"><i class="icon-tag"></i> Gateway</label>
+    <input type="text" id="node-input-gateway">
+  </div>
+  <div class="form-row">
+    <label for="node-input-deviceId"><i class="icon-tag"></i> Device ID</label>
+    <input type="text" id="node-input-deviceId">
+  </div>
+  <div class="form-row">
+    <label for="node-input-property"><i class="icon-tag"></i> Property</label>
+    <input type="text" id="node-input-property">
+  </div>
+  <div class="form-row">
+    <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="thing-property-out">
+  <p>Web of Thigns device property</p>
+  <h3>Outputs</h3>
+  <dl class="message-properties">
+    <dt>payload
+      <span class="property-type">string | buffer</span>
+    </dt>
+  </dl>
+  <h3>Details</h3>
+  <p>Some more information about the node.</p>
+</script>
