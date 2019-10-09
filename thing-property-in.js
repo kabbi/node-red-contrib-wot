@@ -28,6 +28,9 @@ module.exports = RED => {
       if (messageType !== 'propertyStatus') {
         return;
       }
+      if (!(config.property in data)) {
+        return;
+      }
       this.send({
         thing: config.deviceId,
         property: config.property,
