@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["wot", "mozilla"],
+  "author": "kabbi",
+  "license": "MIT",
   "node-red": {
     "nodes": {
       "things-gateway": "things-gateway.js",
