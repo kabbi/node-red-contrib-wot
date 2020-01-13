@@ -1,4 +1,4 @@
-const WebSocket = require('ws');
+const WebSocket = require('reconnecting-websocket');
 
 module.exports = RED => {
   RED.nodes.registerType('thing-property-in', function(config) {

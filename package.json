@@ -26,6 +26,6 @@
   },
   "dependencies": {
     "node-fetch": "^2.6.0",
-    "ws": "^6.2.1"
+    "reconnecting-websocket": "^4.2.0"
   }
 }
